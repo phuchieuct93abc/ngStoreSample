@@ -1,0 +1,34 @@
+<div>
+    <form #form="ngForm">
+
+        <div class="form-group">
+            <div>
+                <h3>favorite: input</h3>
+            </div>
+            <input name="favorite" class="form-control" required [(ngModel)]="favorite" />
+        </div>
+
+        <div class="form-group">
+            <div>
+                <h3>gender: radio </h3>
+            </div>
+
+            <input type="radio" id="male" name="gender" value="male" required [(ngModel)]="gender">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female" required [(ngModel)]="gender">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other" required [(ngModel)]="gender">
+            <label for="other">Other</label>
+        </div>
+        <div class="form-group">
+            <div>
+                <h3>has car: checkbox </h3>
+            </div>
+            <input type="checkbox" id="car"  name="car" value="car"  [(ngModel)]="car">
+            <label for="car">Has car</label>
+        </div>
+
+        <button [disabled]="form.invalid" (click)="submit()">Submit</button>
+
+    </form>
+</div>
