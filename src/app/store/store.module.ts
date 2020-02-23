@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
 import { questionReducer } from './question.reducer';
+import { employeeReducer } from '../employee.effect';
 
 
 @NgModule({
@@ -9,7 +10,8 @@ import { questionReducer } from './question.reducer';
   imports: [
     CommonModule,
     StoreModule.forRoot({
-      answer: questionReducer
+      answer: questionReducer,
+       employee: employeeReducer
     })
   ]
 })
